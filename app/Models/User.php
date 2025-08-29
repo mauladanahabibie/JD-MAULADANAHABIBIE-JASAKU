@@ -3,9 +3,11 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\ChatMessage;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -21,6 +23,8 @@ class User extends Authenticatable
         'username',
         'email',
         'phone',
+        'location',
+        'address',
         'avatar',
         'about',
         'status',
@@ -46,8 +50,35 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
+            'admin_verified' => 'datetime',
             'password' => 'hashed',
+            'location' => 'array',
         ];
+    }
+    protected static function booted()
+    {
+        static::deleting(function ($model) {
+            if ($model->avatar) {
+                Storage::disk('public')->delete($model->avatar);
+            }
+        });
+    }
+    public function getAvatarUrlAttribute()
+    {
+        return $this->avatar
+            ? Storage::url($this->avatar)
+            : 'https://ui-avatars.com/api/?name=' . urlencode($this->name);
+    }
+    public static function beforeSave($record)
+    {
+        if ($record->isDirty('avatar')) {
+            Storage::disk('public')->delete($record->getOriginal('avatar'));
+        }
+    }
+    public function unreadMessages()
+    {
+        return $this->hasMany(ChatMessage::class, 'sender_id')
+            ->where('receiver_id', auth()->id())
+            ->where('is_read', false);
     }
 }
