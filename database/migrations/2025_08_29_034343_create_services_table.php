@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('mitra_id')->constrained('users')->onDelete('cascade');
+            $table->string(('cover'));
             $table->string('name');
             $table->decimal('price', 10, 2);
             $table->text('description');
+            $table->string('category_id');
             $table->string('status');
             $table->timestamps();
         });

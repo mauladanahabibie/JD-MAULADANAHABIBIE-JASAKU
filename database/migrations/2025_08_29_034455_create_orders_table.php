@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('service_id')->constrained('services')->onDelete('cascade');
+            $table->unsignedBigInteger('service_id')->constrained()->onDelete('cascade');
             $table->unsignedBigInteger('customer_id')->constrained('users')->onDelete('cascade');
             $table->unsignedBigInteger('mitra_id')->constrained('users')->onDelete('cascade');
             $table->text('description');
-            $table->string('status');
-            $table->string('bukti');
+            $table->decimal('price', 15, 2); 
+            $table->string('status')->default('belum_bayar');
+            $table->string('bukti')->nullable();
             $table->timestamps();
         });
     }
