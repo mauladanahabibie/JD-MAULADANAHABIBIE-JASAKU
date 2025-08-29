@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+@theme {
+  --font-dancing: "Dancing Script", "cursive";
+  --font-lato: "Lato", "sans-serif";
+  --font-montserrat: "Montserrat", "sans-serif";
 
+  --breakpoint-3xl: 120rem;
+  --color-primary: #BBE2EC;
+  --color-secondary: #0D9276;
+  --color-tertiary: #40A2E3;
+  --color-fontB: #000000;
+  --color-fontW: #F6FFFF;
+
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  /* ... */
+}
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
