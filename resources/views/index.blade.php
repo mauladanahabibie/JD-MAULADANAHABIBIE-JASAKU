@@ -103,7 +103,7 @@
                         Temukan Jasa Profesional
                         yang Anda
                         Butuhkan</h1>
-                    <p class=" text-lg md:text-xl md:w-[70%] mb-8 text-fontB md:text-start text-center">Platform
+                    <p class=" text-lg md:text-xl md:w-[70%] mb-8 text-fontB md:text-start text-justify">Platform
                         terpercaya dan terbaik di
                         Indonesia Dari desain
                         grafis, pembuatan website, pemasaran digital, hingga jasa rumah tangga semua tersedia di satu
@@ -490,7 +490,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold">Alamat</h4>
-                                <p class="text-gray-600">Jl. Sudirman No. 123, Jakarta Selatan, DKI Jakarta</p>
+                                <p class="text-gray-600">Jl RS Fatmawati D-3/115, Dki Jakarta</p>
                             </div>
                         </div>
                         <div class="flex items-start">
