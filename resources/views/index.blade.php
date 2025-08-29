@@ -468,6 +468,153 @@
             </div>
         </div>
     </section>
+        <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class=" mx-auto px-4 sm:px-6 lg:px-36">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ada pertanyaan atau butuh bantuan? Tim kami siap membantu
+                    Anda 24/7.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Lokasi Kami</h3>
+                    <div class="location-map mb-6" id="companyMap">
+                        <img src="{{ Storage::url('assets/kantor.jpeg') }}" alt="Lokasi Kantor"
+                            class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Alamat</h4>
+                                <p class="text-gray-600">Jl. Sudirman No. 123, Jakarta Selatan, DKI Jakarta</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-phone text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Telepon</h4>
+                                <p class="text-gray-600">+62 21 1234 5678</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600">info@jasaku.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-clock text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Jam Operasional</h4>
+                                <p class="text-gray-600">Senin - Jumat: 08:00 - 17:00<br>Sabtu: 09:00 - 15:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama
+                                Lengkap</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subjek</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-tertiary text-white py-3 rounded-lg font-semibold hover:bg-tertiary/80 transition">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class=" mx-auto px-4 sm:px-6 lg:px-36">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">JasaKu</h3>
+                    <p class="text-gray-300 mb-4">Platform marketplace jasa terkemuka di Indonesia, menghubungkan
+                        penyedia jasa profesional dengan klien yang membutuhkan.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Desain & Kreatif</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Teknologi</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Pemasaran Digital</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Rumah Tangga</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Pendidikan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Karir</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Pers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Dukungan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Pusat Bantuan</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Kebijakan Privasi</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Syarat & Ketentuan</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Laporan Masalah</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 JasaKu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -477,18 +624,16 @@
 
             if (toggleButton && menu) {
                 toggleButton.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent this click from triggering the document click handler
+                    e.stopPropagation();
                     menu.classList.toggle('hidden');
                 });
 
-                // Close menu when clicking outside
                 document.addEventListener('click', function(e) {
                     if (!menu.contains(e.target) && e.target !== toggleButton) {
                         menu.classList.add('hidden');
                     }
                 });
 
-                // Prevent clicks inside menu from closing it
                 menu.addEventListener('click', function(e) {
                     e.stopPropagation();
                 });
@@ -524,7 +669,6 @@
             }
         };
 
-        // Open service modal
         document.querySelectorAll('.chat-button, .chat-button-modal').forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
