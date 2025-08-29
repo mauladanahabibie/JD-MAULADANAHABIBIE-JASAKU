@@ -63,8 +63,8 @@
                                 class="text-gray-800 hover:text-tertiary px-3 py-2 rounded-md text-base font-medium transition">Tentang</a>
                             <a href="#contact"
                                 class="text-gray-800 hover:text-tertiary px-3 py-2 rounded-md text-base font-medium transition">Kontak</a>
-                            <button
-                                class="bg-tertiary text-white px-4 py-2 rounded-md text-base font-medium hover:bg-tertiary/80 transition">Masuk</button>
+                            <a href="{{ url('/dashboard') }}"
+                                class="bg-tertiary text-white px-4 py-2 rounded-md text-base font-medium hover:bg-tertiary/80 transition">Masuk</a>
                         </div>
                     </div>
                     <div class="md:hidden">
@@ -85,8 +85,8 @@
                     class="block text-gray-800 hover:text-tertiary py-2 rounded-md text-base font-medium transition">Tentang</a>
                 <a href="#contact"
                     class="block text-gray-800 hover:text-tertiary py-2 rounded-md text-base font-medium transition">Kontak</a>
-                <button
-                    class="bg-tertiary text-white px-4 py-2 rounded-md text-base font-medium hover:bg-tertiary/80 transition">Masuk</button>
+                <a href="{{ url('/dashboard') }}"
+                    class="bg-tertiary text-white px-4 py-2 rounded-md text-base font-medium hover:bg-tertiary/80 transition">Masuk</a>
             </div>
         </div>
     </header>
@@ -615,70 +615,10 @@
             </div>
         </div>
     </footer>
-        <!-- Chat Modal -->
-    <div id="chatModal"
-        class="fixed bottom-0 right-0 left-0 md:left-auto md:right-1 hidden flex items-center justify-center z-50 p-2 md:p-4">
-        <div
-            class="bg-white rounded-lg w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row shadow-lg md:shadow-2xl">
-            <!-- Close button for mobile -->
-            <button id="closeChatModal"
-                class="md:hidden absolute top-2 right-5 md:right-2 text-gray-500 hover:text-gray-700 text-2xl cursor-pointer z-10">&times;</button>
-
-            <!-- Chat area -->
-            <div class="flex-1 flex flex-col h-[70vh] md:h-auto">
-                <div class="p-4 md:p-6 border-b border-gray-200">
-                    <div class="flex justify-between items-center">
-                        <h2 class="text-xl md:text-2xl font-bold text-gray-800">Chat dengan Penjual</h2>
-                        <button id="closeChatModalDesktop"
-                            class="hidden md:block text-gray-500 hover:text-gray-700 text-2xl cursor-pointer">&times;</button>
-                    </div>
-                </div>
-
-                <!-- Messages -->
-                <div id="chatMessages" class="flex-1 overflow-y-auto p-4 bg-gray-50">
-                    <div class="space-y-4">
-                        <div>
-                            <div class="bg-tertiary text-white rounded-lg p-3 max-w-xs md:max-w-md ml-auto">
-                                <p class="text-sm">Halo, saya tertarik dengan layanan desain logo Anda. Bisa dijelaskan
-                                    lebih detail?</p>
-                                <span class="text-xs opacity-80 mt-1 block text-right">{{ \Carbon\Carbon::now()->format('H:i') }}</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="bg-white border border-gray-300 rounded-lg p-3 max-w-xs md:max-w-md">
-                                <p class="text-sm">Halo! Terima kasih atas minatnya. Layanan desain logo kami mencakup
-                                    3 konsep awal, revisi tanpa batas, dan file dalam berbagai format. Apakah Anda sudah
-                                    memiliki ide untuk logo Anda?</p>
-                                <span class="text-xs text-gray-500 mt-1 block">{{ \Carbon\Carbon::now()->format('H:i') }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Input area -->
-                <div class="p-4 border-t border-gray-200">
-                    <div class="flex">
-                        <input type="text" id="chatInput" placeholder="Ketik pesan..."
-                            class="flex-1 border border-gray-300 rounded-l-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary">
-                        <button id="sendAttachment"
-                            class="bg-tertiary text-white px-4 md:px-6 py-3 border-r-2 hover:bg-tertiary/80 transition hover:cursor-pointer">
-                            <i class="fas fa-paperclip"></i>
-                        </button>
-                        <button id="sendChat"
-                            class="bg-tertiary text-white px-4 md:px-6 py-3 rounded-r-lg hover:bg-tertiary/80 transition hover:cursor-pointer">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <livewire:chat />
    <!-- Floating Chat Button -->
     <div class="fixed bottom-6 right-6 flex flex-row-reverse gap-3 items-center">
-        <button
-            class="bg-tertiary text-white p-4 rounded-full shadow-lg hover:bg-tertiary/80 transition cursor-pointer z-40 chat-button">
-            <i class="fas fa-comment text-xl"></i>
-        </button>
+        <livewire:floating-chat-button />
     </div>
 
     <script>
@@ -813,84 +753,7 @@
         });
 
 
-        // Send chat message
-        document.addEventListener('DOMContentLoaded', function() {
-            const chatModal = document.getElementById('chatModal');
-            const closeButtons = document.querySelectorAll('#closeChatModal, #closeChatModalDesktop');
-            const chatInput = document.getElementById('chatInput');
-            const sendButton = document.getElementById('sendChat');
-            const chatMessages = document.getElementById('chatMessages');
 
-            closeButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    chatModal.classList.add('hidden');
-                });
-            });
-
-            chatModal.addEventListener('click', function(e) {
-                if (e.target === chatModal) {
-                    chatModal.classList.add('hidden');
-                }
-            });
-
-            // Send chat message
-            function sendMessage() {
-                const message = chatInput.value.trim();
-
-                if (message) {
-                    const currentTime = new Date().toLocaleTimeString('id-ID', {
-                        hour: '2-digit',
-                        minute: '2-digit'
-                    });
-
-                    chatMessages.innerHTML += `
-                <div class="mb-4 mt-4">
-                    <div class="bg-tertiary text-white rounded-lg p-3 max-w-xs md:max-w-md ml-auto">
-                        <p class="text-sm">${message}</p>
-                        <span class="text-xs opacity-80 mt-1 block text-right">${currentTime}</span>
-                    </div>
-                </div>
-            `;
-
-                    chatInput.value = '';
-                    chatMessages.scrollTop = chatMessages.scrollHeight;
-
-                    setTimeout(() => {
-                        const responses = [
-                            "Terima kasih atas pesannya. Lokasi Anda telah kami terima. Kita bisa bertemu di lokasi yang Anda bagikan.",
-                            "Halo! Terima kasih telah membagikan lokasi. Saya akan segera menuju ke sana.",
-                            "Baik, saya melihat lokasi Anda. Saya akan tiba dalam 15 menit.",
-                            "Sampai jumpa di lokasi! Saya sudah dalam perjalanan."
-                        ];
-                        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                        const responseTime = new Date().toLocaleTimeString('id-ID', {
-                            hour: '2-digit',
-                            minute: '2-digit'
-                        });
-
-                        chatMessages.innerHTML += `
-                    <div class="mb-4 mt-4">
-                        <div class="bg-white border border-gray-300 rounded-lg p-3 max-w-xs md:max-w-md">
-                            <p class="text-sm">${randomResponse}</p>
-                            <span class="text-xs text-gray-500 mt-1 block">${responseTime}</span>
-                        </div>
-                    </div>
-                `;
-
-                        chatMessages.scrollTop = chatMessages.scrollHeight;
-                    }, 1000);
-                }
-            }
-
-            sendButton.addEventListener('click', sendMessage);
-
-            chatInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    sendMessage();
-                }
-            });
-        });
 
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();

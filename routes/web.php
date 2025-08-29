@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\JasaController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [JasaController::class, 'index'])->name('home');
