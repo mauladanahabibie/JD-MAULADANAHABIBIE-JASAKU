@@ -8,6 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 class="text-3xl">Cihuy</h1>
 </body>
 </html>
