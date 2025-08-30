@@ -95,7 +95,7 @@
     <section id="home" class="md:pt-56 pt-28  bg-primary text-white">
         <div class=" mx-auto px-4 sm:px-6 lg:px-36 relative">
             <img class="absolute bottom-0 left-0 w-full -mb-[1px] max-h-[700px]"
-                src="{{ Storage::url('assets/wave2.png') }}" alt="">
+                src="{{ asset('assets/wave2.png') }}" alt="">
             <div class="flex flex-col justify-between md:flex-row">
                 <div class="md:w-1/2 my-auto md:pb-56 relative md:z-10">
                     <h1
@@ -120,7 +120,7 @@
                     </div>
                 </div>
                 <div class="relative md:absolute bottom-0 md:right-1/10">
-                    <img src="{{ Storage::url('assets/header.png') }}" alt="Jasa Profesional"
+                    <img src="{{ asset('assets/header.png') }}" alt="Jasa Profesional"
                         class="w-full object-cover max-h-[700px]">
                 </div>
             </div>
@@ -194,7 +194,7 @@
         <div class=" mx-auto px-4 sm:px-6 lg:px-36">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-10 lg:mb-0">
-                    <img src="{{ Storage::url('assets/thinking.png') }}" alt="Tentang Kami"
+                    <img src="{{ asset('assets/thinking.png') }}" alt="Tentang Kami"
                         class="rounded-lg w-[45rem] ">
                 </div>
                 <div class="lg:w-1/2 lg:pl-12">
@@ -228,92 +228,64 @@
         </div>
     </section>
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-50">
-        <div class=" mx-auto px-4 sm:px-6 lg:px-36">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Ada pertanyaan atau butuh bantuan? Tim kami siap membantu
-                    Anda 24/7.</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Lokasi Kami</h3>
-                    <div class="location-map mb-6" id="companyMap">
-                        <img src="{{ Storage::url('assets/kantor.jpeg') }}" alt="Lokasi Kantor"
-                            class="w-full h-full object-cover rounded-lg">
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <i class="fas fa-map-marker-alt text-secondary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Alamat</h4>
-                                <p class="text-gray-600">Jl RS Fatmawati D-3/115, Dki Jakarta</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <i class="fas fa-phone text-secondary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Telepon</h4>
-                                <p class="text-gray-600">+62 21 1234 5678</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <i class="fas fa-envelope text-secondary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Email</h4>
-                                <p class="text-gray-600">info@jasaku.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <i class="fas fa-clock text-secondary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Jam Operasional</h4>
-                                <p class="text-gray-600">Senin - Jumat: 08:00 - 17:00<br>Sabtu: 09:00 - 15:00</p>
-                            </div>
-                        </div>
-                    </div>
+            <section id="contact" class="py-16 bg-gray-50">
+            <div class=" mx-auto px-4 sm:px-6 lg:px-36">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Ada pertanyaan atau butuh bantuan? Tim kami siap
+                        membantu
+                        Anda 24/7.</p>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
-                    <form id="contactForm" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama
-                                Lengkap</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Lokasi Kami</h3>
+                        <div class="location-map mb-6" id="companyMap">
+                            <img src="{{ asset('assets/kantor.jpeg') }}" alt="Lokasi Kantor"
+                                class="w-full h-full object-cover rounded-lg">
                         </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                            <input type="email" id="email" name="email" required
-                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary">
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                    <i class="fas fa-map-marker-alt text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Alamat</h4>
+                                    <p class="text-gray-600">Jl. Sukowangi No. 123, Banyuwangi</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                    <i class="fas fa-phone text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Telepon</h4>
+                                    <p class="text-gray-600">+62 21 1234 5678</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                    <i class="fas fa-envelope text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">info@jasaku.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                    <i class="fas fa-clock text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Jam Operasional</h4>
+                                    <p class="text-gray-600">Senin - Jumat: 08:00 - 17:00<br>Sabtu: 09:00 - 15:00</p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subjek</label>
-                            <input type="text" id="subject" name="subject" required
-                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
-                            <textarea id="message" name="message" rows="5" required
-                                class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-tertiary text-white py-3 rounded-lg font-semibold hover:bg-tertiary/80 transition">
-                            Kirim Pesan
-                        </button>
-                    </form>
+                    </div>
+                    <livewire:contact-form />
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class=" mx-auto px-4 sm:px-6 lg:px-36">
