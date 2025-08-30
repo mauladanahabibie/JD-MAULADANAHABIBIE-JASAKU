@@ -54,7 +54,7 @@
                     </div>
                     <p class="text-gray-600 text-sm mb-3 line-clamp-2">{!! Str::of($service->description)->sanitizeHtml() !!}</p>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-secondary text-xl font-bold">Rp
+                        <span class="text-[#0059FF] text-xl font-bold">Rp
                             {{ number_format($service->price, 0, ',', '.') }}</span>
                         <span class="text-sm text-gray-500">{{ $service->created_at->diffForHumans() }}</span>
                     </div>
@@ -87,7 +87,7 @@
                             <div class="bg-gray-50 p-4 rounded-lg border-0">
                                 <div class="flex justify-between items-center mb-4">
                                     <h2 class="font-bold text-xl">{{ $selectedService->name }}</h2>
-                                    <span class="text-xl font-bold text-secondary">Rp.
+                                    <span class="text-xl font-bold text-[#0059FF]">Rp.
                                         {{ number_format($selectedService->price, 0, ',', '.') }}</span>
                                 </div>
                                 <h3 class="font-bold text-lg mb-2">Deskripsi Layanan</h3>
@@ -113,11 +113,11 @@
                                 </div>
                                 <div class="grid grid-cols-2 gap-4 mb-4">
                                     <div class="text-center p-3 bg-gray-50 rounded">
-                                        <div class="text-2xl font-bold text-secondary" id="modalSellerOrders">154</div>
+                                        <div class="text-2xl font-bold text-[#0059FF]" id="modalSellerOrders">154</div>
                                         <div class="text-xs text-gray-600">Pesanan Selesai</div>
                                     </div>
                                     <div class="text-center p-3 bg-gray-50 rounded">
-                                        <div class="text-2xl font-bold text-secondary">98%</div>
+                                        <div class="text-2xl font-bold text-[#0059FF]">98%</div>
                                         <div class="text-xs text-gray-600">Tingkat Respons</div>
                                     </div>
                                 </div>
@@ -216,7 +216,7 @@
 
                     <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 my-6">
                         <div class="flex items-start">
-                            <i class="fas fa-lightbulb text-secondary mr-3 mt-1"></i>
+                            <i class="fas fa-lightbulb text-[#0059FF] mr-3 mt-1"></i>
                             <div>
                                 <h4 class="font-semibold mb-1">Tips Memilih Penyedia Jasa</h4>
                                 <p class="text-sm">Periksa ulasan, portofolio, dan komunikasi dengan penyedia

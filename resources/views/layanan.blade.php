@@ -10,7 +10,7 @@
     @vite('resources/js/app.js')
 </head>
 
-<body class="font-sans text-gray-800 bg-gray-50 min-h-screen">
+<body class="font-poppins text-gray-800 bg-gray-50 min-h-screen">
     <livewire:navbar />
     <section class="pt-32 bg-gradient-to-br from-indigo-50 to-white">
         <div class="mx-auto px-4 sm:px-6 lg:px-36">

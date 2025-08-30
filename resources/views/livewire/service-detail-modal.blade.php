@@ -37,11 +37,11 @@
                                 </div>
                                 <div class="grid grid-cols-2 gap-4 mb-4">
                                     <div class="text-center p-3 bg-gray-50 rounded">
-                                        <div class="text-2xl font-bold text-secondary" id="modalSellerOrders">154</div>
+                                        <div class="text-2xl font-bold text-[#0059FF]" id="modalSellerOrders">154</div>
                                         <div class="text-xs text-gray-600">Pesanan Selesai</div>
                                     </div>
                                     <div class="text-center p-3 bg-gray-50 rounded">
-                                        <div class="text-2xl font-bold text-secondary">98%</div>
+                                        <div class="text-2xl font-bold text-[#0059FF]">98%</div>
                                         <div class="text-xs text-gray-600">Tingkat Respons</div>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@
                             <div class="bg-indigo-50 p-6 rounded-lg">
                                 <div class="flex justify-between items-center mb-4">
                                     <span
-                                        class="text-3xl font-bold text-secondary">{{ number_format($service->price, 0, ',', '.') }}</span>
+                                        class="text-3xl font-bold text-[#0059FF]">{{ number_format($service->price, 0, ',', '.') }}</span>
                                     <span
                                         class="bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">{{ $service->status }}</span>
                                 </div>
@@ -144,11 +144,6 @@
                                         <span class="text-gray-700">4.5 (24 ulasan)</span>
                                     </div>
                                 </div>
-                                {{-- <button wire:click="closeModal"
-                                    onclick="Livewire.dispatch('start-chat', { userId: {{ $service->user_id }} })"
-                                    class="w-full bg-tertiary text-white py-3 rounded-lg font-semibold hover:bg-tertiary/80 transition mb-4">
-                                    <i class="fas fa-comment"></i> Chat dengan Penjual
-                                </button> --}}
                             </div>
                         </div>
                     </div>

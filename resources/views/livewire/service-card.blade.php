@@ -11,7 +11,7 @@
         </div>
         <div class="flex flex-wrap justify-between items-center">
             <h3 class="text-xl font-bold mb-2 min-w-0 truncate">{{ $service->name }}</h3>
-            <span class="text-2xl font-bold text-secondary whitespace-nowrap">{{ number_format($service->price, 0, ',', '.') }}</span>
+            <span class="text-2xl font-bold text-[#0059FF] whitespace-nowrap">{{ number_format($service->price, 0, ',', '.') }}</span>
         </div>
         <p class="text-gray-600">{!! Str::limit($service->description, 150) !!}</p>
     </div>

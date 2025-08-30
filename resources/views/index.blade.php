@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 
-<body class="font-sans text-gray-800">
+<body class="font-poppins text-gray-800">
     <!-- Navigation -->
     <livewire:navbar />
 
@@ -128,19 +128,19 @@
                         teknis, dari pendidikan hingga perawatan rumah, semua ada di JasaKu.</p>
                     <div class="grid grid-cols-2 gap-6 mt-8">
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-secondary mb-2">5000+</div>
+                            <div class="text-3xl font-bold text-[#0059FF] mb-2">5000+</div>
                             <div class="text-gray-600">Penyedia Jasa</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-secondary mb-2">100K+</div>
+                            <div class="text-3xl font-bold text-[#0059FF] mb-2">100K+</div>
                             <div class="text-gray-600">Pelanggan Puas</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-secondary mb-2">20+</div>
+                            <div class="text-3xl font-bold text-[#0059FF] mb-2">20+</div>
                             <div class="text-gray-600">Kategori Jasa</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-secondary mb-2">98%</div>
+                            <div class="text-3xl font-bold text-[#0059FF] mb-2">98%</div>
                             <div class="text-gray-600">Tingkat Kepuasan</div>
                         </div>
                     </div>
@@ -165,8 +165,8 @@
                     </div>
                     <div class="space-y-4">
                         <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <i class="fas fa-map-marker-alt text-secondary"></i>
+                            <div class="bg-[#0059FF] p-2 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-fontW"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold">Alamat</h4>
@@ -174,8 +174,8 @@
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <i class="fas fa-phone text-secondary"></i>
+                            <div class="bg-[#0059FF] p-2 rounded-lg mr-4">
+                                <i class="fas fa-phone text-fontW"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold">Telepon</h4>
@@ -183,8 +183,8 @@
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <i class="fas fa-envelope text-secondary"></i>
+                            <div class="bg-[#0059FF] p-2 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-fontW"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold">Email</h4>
@@ -192,8 +192,8 @@
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <i class="fas fa-clock text-secondary"></i>
+                            <div class="bg-[#0059FF] p-2 rounded-lg mr-4">
+                                <i class="fas fa-clock text-fontW"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold">Jam Operasional</h4>

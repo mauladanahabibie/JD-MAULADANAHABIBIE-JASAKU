@@ -82,83 +82,70 @@ Berikut adalah langkah-langkah untuk menjalankan proyek ini di lingkungan lokal.
   * Database (MySQL)
   * [Opsional] Redis untuk *queue* & *caching* di production.
 
-**Langkah-langkah:**
+### Langkah Cepat (Direkomendasikan)
 
-1.  **Clone repositori:**
+Gunakan perintah `app:setup-jasaku` untuk menjalankan instalasi secara otomatis.
+
+1.  **Clone repositori**:
 
     ```bash
     git clone https://github.com/mauladanahabibie/JD_026_MAULADANAHABIBIE_JASAKU.git
     cd JD_026_MAULADANAHABIBIE_JASAKU
     ```
 
-2.  **Instal dependensi PHP:**
-
-    ```bash
-    composer install
-    ```
-
-3.  **Instal dependensi JavaScript:**
-
-    ```bash
-    npm install
-    ```
-
-4.  **Siapkan file `.env`:**
+2.  **Siapkan file `.env`:**
     Salin file `.env.example` menjadi `.env`.
 
     ```bash
     cp .env.example .env
     ```
 
-    Buka file `.env` dan konfigurasikan koneksi database Anda (DB\_DATABASE, DB\_USERNAME, DB\_PASSWORD) atau pakai default aja.
-
-5.  **Generate application key:**
+3.  **Jalankan perintah setup**:
+    Perintah ini akan menginstal semua dependensi, membuat `.env`, melakukan migrasi database, dan membuat *symbolic link* storage.
 
     ```bash
+    php artisan app:setup-jasaku
+    ```
+
+### Langkah Manual
+
+Jika Anda lebih suka menginstal secara manual, ikuti langkah-langkah di bawah ini.
+
+1.  **Clone repositori**:
+
+    ```bash
+    git clone https://github.com/mauladanahabibie/JD_026_MAULADANAHABIBIE_JASAKU.git
+    cd JD_026_MAULADANAHABIBIE_JASAKU
+    ```
+
+2.  **Instal dependensi**:
+
+    ```bash
+    composer install
+    npm install
+    ```
+
+3.  **Siapkan `.env` dan *key***:
+
+    ```bash
+    cp .env.example .env
     php artisan key:generate
     ```
 
-6.  **Jalankan migrasi database:**
-    Perintah ini akan membuat semua tabel yang dibutuhkan, termasuk untuk `users`, `services`, `chat_messages`, `orders`, `transactions`, dan `cache`.
+    Buka file `.env` dan konfigurasikan koneksi database Anda.
+
+4.  **Jalankan migrasi database**:
 
     ```bash
     php artisan migrate --seed
     ```
 
-7.  **Buat symbolic link untuk storage:**
-    Agar file yang di-upload (seperti gambar layanan dan bukti bayar) bisa diakses publik.
+5.  **Buat *symbolic link***:
 
     ```bash
     php artisan storage:link
     ```
 
-**Langkah Ke 2:**
-1.  **Clone repositori:**
-
-    ```bash
-    git clone https://github.com/mauladanahabibie/JD_026_MAULADANAHABIBIE_JASAKU.git
-    cd JD_026_MAULADANAHABIBIE_JASAKU
-    ```
-
-2.  **Instal dependensi PHP:**
-
-    ```bash
-    composer install
-    ```
-3.  **Siapkan file `.env`:**
-    Salin file `.env.example` menjadi `.env`.
-
-    ```bash
-    cp .env.example .env
-    ```
-
-    Buka file `.env` dan konfigurasikan koneksi database Anda (DB\_DATABASE, DB\_USERNAME, DB\_PASSWORD) atau pakai default aja.
-
-4.  **Start Setup**
-
-    ```bash
-    php artisan app:setup-jasaku
-    ```
 -----
 
 
@@ -191,6 +178,13 @@ Anda perlu menjalankan **4 proses** ini di terminal yang terpisah untuk fungsion
     ```
 
 Setelah semua berjalan, buka aplikasi di `http://127.0.0.1:8000` di browser Anda.
+
+**Untuk Login Admin**:
+Anda bisa mengakses halaman admin di `http://127.0.0.1:8000/admin`. Gunakan akun *super admin* berikut:
+
+  - **Email**: `superadmin@gmail.com`
+  - **Password**: `superadminabis`
+
 
 -----
 

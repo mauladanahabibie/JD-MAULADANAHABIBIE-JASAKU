@@ -25,17 +25,15 @@ class Setup extends Command
     /**
      * Execute the console command.
      */
- public function handle()
+    public function handle()
     {
         $this->info('🚀 Gas Mulai Setup Cuyy');
 
         // 1. Install Dependensi JavaScript (NPM)
         $this->comment('Menjalankan npm install...');
-        $npmProcess = Process::fromShellCommandline('npm install');
-        $npmProcess->run(function ($type, $buffer) {
-            $this->output->write($buffer);
-        });
-        if (!$npmProcess->isSuccessful()) {
+        $process = Process::run('npm install');
+
+        if ($process->failed()) {
             $this->error('❌ NPM install gagal. Pastikan Node.js dan NPM terinstal.');
             return Command::FAILURE;
         }
@@ -43,7 +41,7 @@ class Setup extends Command
 
         $this->info('❗ Jangan lupa jalankan laragon atau xamppnya dulu sebelum menjalankan setup');
         $this->comment('Menjalankan migrasi database dan seeder...');
-        Artisan::call('migrate:fresh', ['--seed' => true]);
+        Artisan::call('migrate', ['--seed' => true]);
         $this->info('✅ Migrasi dan seeder selesai.');
 
         // 2. Buat Symlink Storage
