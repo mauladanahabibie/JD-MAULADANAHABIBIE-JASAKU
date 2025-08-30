@@ -90,22 +90,6 @@
         </button>
         <livewire:floating-chat-button />
     </div>
-
-    <script>
-        // Opsional: Jika Anda masih ingin menggunakan JavaScript untuk menu mobile
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
 </body>
 
 </html>

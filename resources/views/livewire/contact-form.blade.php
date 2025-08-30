@@ -1,4 +1,4 @@
-<div>
+<div class="bg-white p-8 rounded-2xl shadow-lg">
     <h3 class="text-xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
 
     @if ($success)

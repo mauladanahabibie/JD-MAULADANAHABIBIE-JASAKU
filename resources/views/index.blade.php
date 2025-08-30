@@ -30,13 +30,13 @@
                         Indonesia Dari desain
                         grafis, pembuatan website, pemasaran digital, hingga jasa rumah tangga semua tersedia di satu
                         tempat. Percayakan kebutuhan Anda pada ahli terbaik, hanya di Jasaku!</p>
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 z-10">
+                    <div class="flex flex-col text-center md:text-start sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 z-10 font-poppins">
                         <a href="#services"
                             class="bg-tertiary cursor-pointer text-fontW px-8 py-3 rounded-lg font-semibold hover:bg-tertiary/80 transition duration-300">
                             Jelajahi Layanan
                         </a>
                         <a href="{{ url('/mitra') }}"
-                            class="border-2 cursor-pointer border-fontB text-fontB px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                            class="border-2 cursor-pointer border-tertiary text-fontB px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
                             Jadi Penyedia Jasa
                         </a>
                     </div>
@@ -50,7 +50,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 bg-gray-50">
+    <section id="services" class="py-16 bg-gray-50" style="background-image: ">
         <div class=" mx-auto px-4 sm:px-6 lg:px-36">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Layanan Populer</h2>
@@ -116,7 +116,7 @@
         <div class=" mx-auto px-4 sm:px-6 lg:px-36">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-10 lg:mb-0">
-                    <img src="{{ asset('assets/thinking.png') }}" alt="Tentang Kami" class="rounded-lg w-[45rem] ">
+                    <img src="{{ asset('assets/about.png') }}" alt="Tentang Kami" class="rounded-lg w-[45rem] ">
                 </div>
                 <div class="lg:w-1/2 lg:pl-12">
                     <h2 class="text-3xl font-bold text-gray-800 mb-6">Tentang JasaKu</h2>
@@ -161,8 +161,7 @@
                 <div>
                     <h3 class="text-xl font-bold text-gray-800 mb-6">Lokasi Kami</h3>
                     <div class="location-map mb-6" id="companyMap">
-                        <img src="{{ asset('assets/kantor.jpeg') }}" alt="Lokasi Kantor"
-                            class="w-full h-full object-cover rounded-lg">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1974.4148271581603!2d114.36866252945251!3d-8.21987982839678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd145b383ae9f8d%3A0xfe27ef9d34b7bf07!2sRicheese%20Factory%20Banyuwangi!5e0!3m2!1sid!2sid!4v1756535625095!5m2!1sid!2sid" width="100%" height="100%" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="space-y-4">
                         <div class="flex items-start">
