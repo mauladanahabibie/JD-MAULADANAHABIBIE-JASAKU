@@ -7,6 +7,7 @@ use Filament\Tables;
 use App\Models\Service;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Support\RawJs;
 use Filament\Facades\Filament;
 use App\Models\ServiceCategory;
 use Filament\Resources\Resource;
@@ -75,7 +76,10 @@ class ServiceResource extends Resource
                         ->label('Nama Produk')
                         ->required(),
                     TextInput::make('price')
+                        ->prefix('Rp.')
+                        ->mask(RawJs::make('$money($input)'))
                         ->numeric()
+                        ->stripCharacters(',')
                         ->label('Harga Produk')
                         ->required(),
                     Select::make('category_id')
@@ -87,18 +91,18 @@ class ServiceResource extends Resource
                         ->preload()
                         ->when(
                             Filament::auth()->user()?->status === 'admin',
-                            fn ($field) => $field->createOptionUsing(function (array $data) {
+                            fn($field) => $field->createOptionUsing(function (array $data) {
                                 $category = ServiceCategory::create([
                                     'name' => $data['name'],
                                 ]);
                                 return $category->id;
                             })
-                            ->createOptionForm([
-                                TextInput::make('name')
-                                    ->label('Nama Kategori')
-                                    ->placeholder('Contoh: Olahraga, Teknologi, dll')
-                            ])
-                            ),
+                                ->createOptionForm([
+                                    TextInput::make('name')
+                                        ->label('Nama Kategori')
+                                        ->placeholder('Contoh: Olahraga, Teknologi, dll')
+                                ])
+                        ),
                     RichEditor::make('description')
                         ->label('Deskripsi Produk')
                         ->required()
