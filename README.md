@@ -92,15 +92,20 @@ Gunakan perintah `app:setup-jasaku` untuk menjalankan instalasi secara otomatis.
     git clone https://github.com/mauladanahabibie/JD_026_MAULADANAHABIBIE_JASAKU.git
     cd JD_026_MAULADANAHABIBIE_JASAKU
     ```
+2.  **Instal dependensi Composer:**
 
-2.  **Siapkan file `.env`:**
+    ```bash
+    composer install
+    ```
+
+3.  **Siapkan file `.env`:**
     Salin file `.env.example` menjadi `.env`.
 
     ```bash
     cp .env.example .env
     ```
 
-3.  **Jalankan perintah setup**:
+4.  **Jalankan perintah setup**:
     Perintah ini akan menginstal semua dependensi, membuat `.env`, melakukan migrasi database, dan membuat *symbolic link* storage.
 
     ```bash
