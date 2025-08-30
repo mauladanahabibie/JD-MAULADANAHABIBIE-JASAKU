@@ -94,8 +94,8 @@
     <!-- Hero Section -->
     <section id="home" class="md:pt-56 pt-28  bg-primary text-white">
         <div class=" mx-auto px-4 sm:px-6 lg:px-36 relative">
-            <img class="absolute bottom-0 left-0 w-full -mb-[1px] max-h-[700px]"
-                src="{{ asset('assets/wave2.png') }}" alt="">
+            <img class="absolute bottom-0 left-0 w-full -mb-[1px] max-h-[700px]" src="{{ asset('assets/wave2.png') }}"
+                alt="">
             <div class="flex flex-col justify-between md:flex-row">
                 <div class="md:w-1/2 my-auto md:pb-56 relative md:z-10">
                     <h1
@@ -194,8 +194,7 @@
         <div class=" mx-auto px-4 sm:px-6 lg:px-36">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-10 lg:mb-0">
-                    <img src="{{ asset('assets/thinking.png') }}" alt="Tentang Kami"
-                        class="rounded-lg w-[45rem] ">
+                    <img src="{{ asset('assets/thinking.png') }}" alt="Tentang Kami" class="rounded-lg w-[45rem] ">
                 </div>
                 <div class="lg:w-1/2 lg:pl-12">
                     <h2 class="text-3xl font-bold text-gray-800 mb-6">Tentang JasaKu</h2>
@@ -228,64 +227,114 @@
         </div>
     </section>
     <!-- Contact Section -->
-            <section id="contact" class="py-16 bg-gray-50">
-            <div class=" mx-auto px-4 sm:px-6 lg:px-36">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Ada pertanyaan atau butuh bantuan? Tim kami siap
-                        membantu
-                        Anda 24/7.</p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-6">Lokasi Kami</h3>
-                        <div class="location-map mb-6" id="companyMap">
-                            <img src="{{ asset('assets/kantor.jpeg') }}" alt="Lokasi Kantor"
-                                class="w-full h-full object-cover rounded-lg">
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class=" mx-auto px-4 sm:px-6 lg:px-36">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ada pertanyaan atau butuh bantuan? Tim kami siap
+                    membantu
+                    Anda 24/7.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Lokasi Kami</h3>
+                    <div class="location-map mb-6" id="companyMap">
+                        <img src="{{ asset('assets/kantor.jpeg') }}" alt="Lokasi Kantor"
+                            class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Alamat</h4>
+                                <p class="text-gray-600">Jl. Sukowangi No. 123, Banyuwangi</p>
+                            </div>
                         </div>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                    <i class="fas fa-map-marker-alt text-secondary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Alamat</h4>
-                                    <p class="text-gray-600">Jl. Sukowangi No. 123, Banyuwangi</p>
-                                </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-phone text-secondary"></i>
                             </div>
-                            <div class="flex items-start">
-                                <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                    <i class="fas fa-phone text-secondary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Telepon</h4>
-                                    <p class="text-gray-600">+62 21 1234 5678</p>
-                                </div>
+                            <div>
+                                <h4 class="font-semibold">Telepon</h4>
+                                <p class="text-gray-600">+62 21 1234 5678</p>
                             </div>
-                            <div class="flex items-start">
-                                <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                    <i class="fas fa-envelope text-secondary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Email</h4>
-                                    <p class="text-gray-600">info@jasaku.com</p>
-                                </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-secondary"></i>
                             </div>
-                            <div class="flex items-start">
-                                <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                    <i class="fas fa-clock text-secondary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Jam Operasional</h4>
-                                    <p class="text-gray-600">Senin - Jumat: 08:00 - 17:00<br>Sabtu: 09:00 - 15:00</p>
-                                </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600">info@jasaku.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-clock text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Jam Operasional</h4>
+                                <p class="text-gray-600">Senin - Jumat: 08:00 - 17:00<br>Sabtu: 09:00 - 15:00</p>
                             </div>
                         </div>
                     </div>
-                    <livewire:contact-form />
+                </div>
+                <livewire:contact-form />
+            </div>
+        </div>
+    </section>
+    <!-- AI Chatbot Modal -->
+    <div id="aiChatbotModal"
+        class="fixed bottom-0 md:right-1 shadow-lg hidden flex rounded-lg items-center justify-end z-50 md:shadow-2xl">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-2xl font-bold text-gray-800">AI Assistant JasaKu</h2>
+                    <button id="closeAiChatbotModal"
+                        class="text-gray-500 hover:text-gray-700 text-2xl cursor-pointer">&times;</button>
+                </div>
+                <div class="chat-container bg-gray-100 rounded-lg p-4 mb-4 h-60 overflow-y-auto" id="aiChatMessages">
+                    <div class="mb-4">
+                        <div class="bg-tertiary text-white rounded-lg p-3 max-w-xs">
+                            <p class="text-sm">Halo! Saya adalah asisten AI JasaKu. Bagaimana saya bisa membantu
+                                Anda
+                                hari ini?</p>
+                            <span class="text-xs opacity-80 mt-1 block text-right">
+                                <script>
+                                    document.write(new Date().toLocaleTimeString('id-ID', {
+                                        hour: '2-digit',
+                                        minute: '2-digit'
+                                    }));
+                                </script>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="typing-indicator mb-2" id="aiTyping" style="display: none;">AI sedang mengetik...
+                </div>
+                <div class="flex">
+                    <input type="text" id="aiChatInput" placeholder="Ketik pertanyaan Anda..."
+                        class="flex-1 border border-gray-300 rounded-l-lg p-3 focus:outline-none focus:ring-2 focus:ring-tertiary">
+                    <button id="helpAiChat"
+                        class="bg-tertiary text-white px-4 py-3 border-r-2 hover:bg-tertiary/80 transition cursor-pointer"
+                        title="Tampilkan bantuan cepat">
+                        ℹ️
+                    </button>
+                    <button id="sendAiChat"
+                        class="bg-tertiary text-white px-6 py-3 rounded-r-lg hover:bg-tertiary/80 transition cursor-pointer">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="mt-4 text-xs text-gray-500">
+                    <p><i class="fas fa-info-circle mr-1"></i> AI Assistant ini memberikan informasi yang akurat
+                        dan
+                        membantu Anda menemukan penyedia jasa yang tepat.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class=" mx-auto px-4 sm:px-6 lg:px-36">
@@ -351,75 +400,14 @@
     @endauth
     <!-- Floating Chat Button -->
     <div class="fixed bottom-6 right-6 flex flex-row-reverse gap-3 items-center">
+        <button id="floatingChatBtn"
+            class=" bg-tertiary text-white p-4 rounded-full shadow-lg hover:bg-tertiary/80 transition z-40 cursor-pointer">
+            <i class="fas fa-robot text-xl"></i>
+        </button>
         <livewire:floating-chat-button />
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menu = document.querySelector('.mobile-menu');
-            const toggleButton = document.getElementById('mobile-menu-toggle');
-
-            if (toggleButton && menu) {
-                toggleButton.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    menu.classList.toggle('hidden');
-                });
-
-                // Close menu when clicking outside
-                document.addEventListener('click', function(e) {
-                    if (!menu.contains(e.target) && e.target !== toggleButton) {
-                        menu.classList.add('hidden');
-                    }
-                });
-
-                // Prevent clicks inside menu from closing it
-                menu.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                });
-            } else {
-                console.error('Menu elements not found!');
-            }
-        });
-
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Terima kasih atas pesan Anda. Tim kami akan segera menghubungi Anda.');
-            this.reset();
-        });
-
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        document.getElementById('serviceModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.add('hidden');
-            }
-        });
-
-        document.getElementById('chatModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.add('hidden');
-            }
-        });
-
-        document.getElementById('orderModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.add('hidden');
-            }
-        });
-    </script>
+    @vite('resources/js/app.js')
+    @livewireScripts
 </body>
 
 </html>
