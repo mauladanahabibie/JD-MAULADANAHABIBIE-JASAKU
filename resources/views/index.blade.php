@@ -92,35 +92,35 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="md:pt-56 pt-28  bg-primary text-white">
+    <section id="home" class="md:pt-56 md:pb-40 pt-28 text-black">
         <div class=" mx-auto px-4 sm:px-6 lg:px-36 relative">
-            <img class="absolute bottom-0 left-0 w-full -mb-[1px] max-h-[700px]" src="{{ asset('assets/wave2.png') }}"
-                alt="">
-            <div class="flex flex-col justify-between md:flex-row">
-                <div class="md:w-1/2 my-auto md:pb-56 relative md:z-10">
+            {{-- <img class="absolute bottom-0 left-0 w-full -mb-[1px] max-h-[700px]" src="{{ asset('assets/wave2.png') }}"
+                alt=""> --}}
+            <div class="flex flex-col-reverse justify-between items-center gap-10  md:flex-row">
+                <div class="md:w-1/2 my-auto md:pb-10 relative md:z-10">
                     <h1
-                        class="text-4xl md:text-6xl max-w-[50rem] font-bold mb-6 text-secondary md:text-start text-center">
-                        Temukan Jasa Profesional
-                        yang Anda
+                        class="text-4xl md:text-7xl max-w-[50rem] font-bold font-space mb-6 text-fontB md:text-start text-center">
+                        Temukan Jasa <br>Profesional
+                        yang <br> Anda
                         Butuhkan</h1>
-                    <p class=" text-lg md:text-xl md:w-[70%] mb-8 text-fontB md:text-start text-justify">Platform
+                    <p class=" text-lg md:text-xl md:w-[70%] mb-8 text-[#919191] md:text-start text-justify">Platform
                         terpercaya dan terbaik di
                         Indonesia Dari desain
                         grafis, pembuatan website, pemasaran digital, hingga jasa rumah tangga semua tersedia di satu
                         tempat. Percayakan kebutuhan Anda pada ahli terbaik, hanya di Jasaku!</p>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 z-10">
-                        <button
-                            class="bg-tertiary text-fontW px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-tertiary transition transform hover:scale-105">
+                        <a href="#services"
+                            class="bg-tertiary cursor-pointer text-fontW px-8 py-3 rounded-lg font-semibold hover:bg-tertiary/80 transition duration-300">
                             Jelajahi Layanan
-                        </button>
-                        <button
-                            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-tertiary transition transform hover:scale-105">
+                        </a>
+                        <a href="{{ url('/mitra') }}"
+                            class="border-2 cursor-pointer border-fontB text-fontB px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
                             Jadi Penyedia Jasa
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="relative md:absolute bottom-0 md:right-1/10">
-                    <img src="{{ asset('assets/header.png') }}" alt="Jasa Profesional"
+                    <img src="{{ asset('assets/orang3.svg') }}" alt="Jasa Profesional"
                         class="w-full object-cover max-h-[700px]">
                 </div>
             </div>
