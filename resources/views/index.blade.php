@@ -7,89 +7,11 @@
     <title>JasaKu - Marketplace Jasa</title>
     @vite('resources/css/app.css')
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .service-card:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-
-        .chat-bubble:hover {
-            transform: scale(1.05);
-            transition: all 0.2s ease;
-        }
-
-        .location-map {
-            height: 300px;
-            width: 100%;
-        }
-
-        .map-container {
-            position: relative;
-            height: 400px;
-            width: 100%;
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-
-        .map-placeholder {
-            background: linear-gradient(45deg, #f0f1f6 25%, transparent 25%, transparent 50%, #f0f1f6 50%, #f0f1f6 75%, transparent 75%, transparent);
-            background-size: 50px 50px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4a5568;
-            font-weight: 500;
-        }
-    </style>
 </head>
 
 <body class="font-sans text-gray-800">
     <!-- Navigation -->
-    <header class="fixed w-full top-0 z-50">
-        <nav class="bg-white shadow-lg">
-            <div class=" mx-auto px-4 sm:px-6 lg:px-36">
-                <div class="flex justify-between items-center h-16">
-                    <div class="flex items-center">
-                        <span class="text-3xl font-bold font-dancing">JasaKu</span>
-                    </div>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-center space-x-4">
-                            <a href="#home"
-                                class="text-gray-800 hover:text-tertiary px-3 py-2 rounded-md text-base font-medium transition">Beranda</a>
-                            <a href="#services"
-                                class="text-gray-800 hover:text-tertiary px-3 py-2 rounded-md text-base font-medium transition">Layanan</a>
-                            <a href="#about"
-                                class="text-gray-800 hover:text-tertiary px-3 py-2 rounded-md text-base font-medium transition">Tentang</a>
-                            <a href="#contact"
-                                class="text-gray-800 hover:text-tertiary px-3 py-2 rounded-md text-base font-medium transition">Kontak</a>
-                            <a href="{{ url('/dashboard') }}"
-                                class="bg-tertiary text-white px-4 py-2 rounded-md text-base font-medium hover:bg-tertiary/80 transition">Masuk</a>
-                        </div>
-                    </div>
-                    <div class="md:hidden">
-                        <button class="text-gray-800 hover:text-tertiary focus:outline-none" id="mobile-menu-toggle">
-                            <i class="fas fa-bars text-xl"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="mobile-menu hidden">
-            <div class="bg-white w-full p-4">
-                <a href="#home"
-                    class="block text-gray-800 hover:text-tertiary py-2 rounded-md text-base font-medium transition">Beranda</a>
-                <a href="#services"
-                    class="block text-gray-800 hover:text-tertiary py-2 rounded-md text-base font-medium transition">Layanan</a>
-                <a href="#about"
-                    class="block text-gray-800 hover:text-tertiary py-2 rounded-md text-base font-medium transition">Tentang</a>
-                <a href="#contact"
-                    class="block text-gray-800 hover:text-tertiary py-2 rounded-md text-base font-medium transition">Kontak</a>
-                <a href="{{ url('/dashboard') }}"
-                    class="bg-tertiary text-white px-4 py-2 rounded-md text-base font-medium hover:bg-tertiary/80 transition">Masuk</a>
-            </div>
-        </div>
-    </header>
+    <livewire:navbar />
 
     <!-- Hero Section -->
     <section id="home" class="md:pt-56 md:pb-40 pt-28 text-black">
@@ -336,65 +258,7 @@
         </div>
     </div>
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class=" mx-auto px-4 sm:px-6 lg:px-36">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">JasaKu</h3>
-                    <p class="text-gray-300 mb-4">Platform marketplace jasa terkemuka di Indonesia, menghubungkan
-                        penyedia jasa profesional dengan klien yang membutuhkan.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-white transition"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-white transition"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-white transition"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Layanan</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Desain & Kreatif</a>
-                        </li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Teknologi</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Pemasaran Digital</a>
-                        </li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Rumah Tangga</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Pendidikan</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Perusahaan</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Tentang Kami</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Karir</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Pers</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Kontak</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Dukungan</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Pusat Bantuan</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Kebijakan Privasi</a>
-                        </li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Syarat & Ketentuan</a>
-                        </li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">FAQ</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Laporan Masalah</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-300">&copy; 2025 JasaKu. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <livewire:footer />
     @auth
         <livewire:chat />
     @endauth
