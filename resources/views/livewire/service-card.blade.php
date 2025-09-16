@@ -1,5 +1,5 @@
 <div wire:click="$dispatch('showServiceDetail', { serviceId: {{ $service->id }} })"
-    class="bg-white rounded-lg shadow-md overflow-hidden service-card">
+    class="bg-white rounded-lg shadow-md overflow-hidden service-card cursor-pointer">
     <img src="{{ Storage::url($service->cover) }}" alt="{{ $service->name }}"
         class="w-full l h-72  aspect-square object-center object-cover">
     <div class="p-6">
